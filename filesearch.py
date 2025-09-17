@@ -9,6 +9,7 @@ mcp=FastMCP("filesearch")
 
 @mcp.tool()
 def search_file(keyword: str, ) -> List[str]:
+    """Serch for a keyword in text files and return the names of files containing the keyword"""
     matching_files = []
     for file_name in os.listdir(TEXT_FOLDER):
         if file_name.endswith(".txt"):
